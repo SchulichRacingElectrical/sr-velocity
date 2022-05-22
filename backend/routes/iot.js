@@ -10,7 +10,7 @@ iot.all("*", withMinimumAuth("Lead"), async (req, res) => {
     headers: req.headers,
     json: req.body,
   });
-  res.status(response.status).json(response.body).end();
+  res.status(response.statusCode).json(response.body).end();
 });
 
 module.exports = iot;
